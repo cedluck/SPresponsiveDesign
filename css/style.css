@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'SourceSansPro';
+    src : url('../assets/fonts/SourceSansPro-Regular.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica,  Arial, sans-serif;
+  font-size: 1em;
+  display: flex;
+  overflow-x: hidden;
+  /* background-color: #f5f5f5; */
+}
+h1, h3, p {
+  font-family: 'SourceSansPro', Arial, sans-serif;
+  color: #1a2052;
+}
+.wrapper {
+  margin: auto;
+  width: 1300px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#logo {
+  margin-left: 127px;
+  margin-top: 10px;
+  width: 189px;
+
+}
+.bg {
+ margin-right: 32px;
+}
+.rightside {
+  position: relative;
+  height:250px;
+}
+
+
+
+/* NAVBAR */
+.nav  {
+  position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+}
+.nav ul{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap:3em;
+ 
+}
+.nav ul li {
+  text-align: center;
+  height: 32px;
+  list-style-type: none;   
+  font-size: 1.2em;
+  color: #1a2052;
+  border-bottom: 2px solid #383838;
+}
+.nav ul li:hover {
+  cursor: pointer;
+  color: #e78300;
+  border-bottom: 2px solid #e78300;
+}
+
+
+
+/* RESEAUX SOCIAUX */
+.rs {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.rs ul li {
+  list-style-type: none;   
+}
+.icon {
+  width: 15px;
+}
+
+
+
+/* SECTION 1 */
+.section1 {
+  background: url('../assets/img/flux-de-stefane-perraud-en-gare-de-est-paris-prod-digitalarti-1.jpg') no-repeat;
+  height: 600px;
+  display: flex;
+}
+.section1 .section_text {
+  text-align: center;
+  margin: 395px auto;
+  line-height: 1em;
+}
+.section_text h1{
+  font-size: 50px;
+  color: #ffffff;
+}
+.section_text p{
+   color: #ffffff;
+  font-size: 20px;
+}
+
+
+
+/* intersection 1*/
+.bg_intersection{
+  background: url('../assets/svg/imported-layers-2.svg');
+  height: 50px;
+  display: flex;
+}
+.intersection p {
+  margin: auto;
+}
+
+
+
+/* SECTION 2 */
+.section2{
+  text-align: center;
+  background: #f5f5f5;
+}
+.section2 .cards h3 {
+  margin: 0;
+  font-variant: small-caps;
+  font-size: 24px;
+  color: #1a2052;
+}
+.section2 .cards {
+  text-align: left;
+  margin-top: 51px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2em;
+  padding: 0px 90px;
+  
+}
+
+.section2 .cards > img {
+  background-blend-mode: color-dodge;
+}
+
+.section2 .section_footer {
+  padding-bottom: 40px;
+}
+
+
+
+/* SECTION 3 */
+.section3 {
+  background-image: url('../assets/img/aeroport-paris-cdg-oeuvre-sur-natures-de-miguel-chevalier.png') ;
+  background-blend-mode: soft-light;
+  opacity: 0.85;
+  text-align: center;
+  background-color: #1a2052;
+  height: 761px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.section3 h3{
+  
+  margin: 0;
+  font-variant: small-caps;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.section3 > p {
+  color: #fff;
+  width: 590px;
+  font-family: 'SourceSansPro';
+  align-self: center;
+ 
+}
+.section3 .cards {
+  text-align: center;
+  font-family: 'SourceSansPro';
+  margin-top: 51px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1em;
+  padding: 0px 90px;
+}
+.section3 .cards h3{
+  font-weight: 400;
+  font-variant: initial;
+}
+.section3 .cards p {
+  text-align: left;
+ color: rgb(255, 255, 255);
+ 
+}
+
+.section3 .section_footer p {
+  color: #ffffff;
+}
