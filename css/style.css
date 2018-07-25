@@ -16,20 +16,32 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1em;
-  display: flex;
   overflow-x: hidden;
   background-color: #f5f5f5;
 }
 
-h1, h3, h4, p, h6, li {
+h1, h3, h5, p, h6, li {
   font-family: 'SourceSansPro';
   font-weight: normal;
   color: #1a2052;
 }
 
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-family: 'SourceSansProSemiBold';
+  font-size: 1.25em; 
+}
+
+p {
+  font-size: 0.87em;
+}
+
 .wrapper {
   margin: auto;
-  width: 1300px;
+  max-width: 1300px;
   display: flex;
   flex-direction: column;
 }
@@ -41,20 +53,31 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-height: 100%;
 }
 
-#logo {
-  margin-left: 127px;
-  margin-top: 10px;
-  width: 189px;
+[id="logo"] {
+  margin-left: 10%;
+  margin-top: 10%;
+  max-width: 189px;
 
 }
-.bg {
+
+.bg svg{
  margin-right: 32px;
+ max-width: 100%;
 }
+
 .rightside {
   position: relative;
-  height:250px;
+
+}
+
+@media only screen  and (max-width: 1024px) {
+
+  [id="logo"]{
+    width: 100%;
+  }
 }
 
 
@@ -86,6 +109,20 @@ header {
   border-bottom: 2px solid #e78300;
 }
 
+@media only screen  and (max-width: 1024px) {
+  .nav ul li {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen  and (max-width: 768px) {
+  .nav ul li {
+    font-size: 0.6em;
+  }
+}
+
+
+
 
 
 /* RESEAUX SOCIAUX */
@@ -98,7 +135,7 @@ header {
   list-style-type: none;   
 }
 .icon {
-  width: 15px;
+  max-width: 15px;
 }
 
 /* SECTION FOOTERS */
@@ -116,228 +153,358 @@ header {
     color: #ffffff;
 }
 
-/* SECTION 1 */
-.section1 {
-  background: url('../assets/img/flux-de-stefane-perraud-en-gare-de-est-paris-prod-digitalarti-1.jpg') no-repeat;
-  background-size: 100%;
-  height: 600px;
-  display: flex;
+@media only screen and (max-width: 768px) {
+
+  .section_footer.light p,
+  .section_footer.dark p {
+    font-size: 0.8em;
+  }
+
+   .section_footer.light svg,
+  .section_footer.dark svg {
+    width: 25px;
+  }
 }
-.section1 .section_text {
-  text-align: center;
-  margin: 395px auto;
+
+
+/* SECTION SCHOWCASE */
+
+.section_showcase img {
+  max-width: 100%;
+} 
+
+.section_showcase .section_text {
+  position: absolute;
+  margin: -250px 20%;
   line-height: 1.5em;
 }
 
-.section_text h1, .section_text p{
+.section_showcase .section_text h1, 
+.section_showcase .section_text p{
   color: #ffffff;
 }
-.section_text h1{
+
+.section_showcase .section_text h1{
   font-size: 50px;
   font-weight: bold;
-  
 }
-.section_text p{
+
+.section_showcase .section_text p{
   font-size: 20px;
 }
+
+@media only screen  and (max-width: 1024px) {
+  .section_showcase .section_text h1 {
+    font-size: 2em;
+  }
+}
+
+@media only screen  and (max-width: 768px) {
+
+  .section_showcase .section_text {
+    margin: -150px 10%;
+  }
+  .section_showcase .section_text h1 {
+    font-size: 1.5em;
+  }
+  .section_showcase .section_text p {
+    font-size: 0.85em;
+  }
+}
+
 
 
 
 /* intersection 1*/
+
 .bg_intersection{
   background: url('../assets/svg/imported-layers-2.svg') no-repeat;
   background-size: 50%;
-
-  height: 50px;
+  max-height: 50px;
   display: flex;
 }
+
 .intersection p {
   margin: auto;
+}
+
+@media only screen and (max-width:768px) {
+  .intersection p {
+    font-size: 0.6em;
+  }
+}
+
+@media only screen and (max-width:400px) {
+  .intersection p {
+    font-size: 0.5em;
+  }
 }
 
 
 
 /* SECTION 2 */
-.section2 {
+.section_services {
   text-align: center;
   background: #f5f5f5;
 }
-.section2 > h3 {
-  font-family: 'SourceSansPro';
+
+.section_services > h3 {
   margin: 0;
   padding-top: 40px;
   font-variant: small-caps;
   font-size: 1.5em;
 }
 
-.section2 .cards {
+.section_services .cards {
   text-align: center;
   margin-top: 51px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 20px;
-  padding: 0px 90px;
+  padding: 0px 10%;
 }
 
-.section2 .cards h3 {
+.section_services .cards h4 {
   margin-top: 35px;
-  font-family: 'SourceSansProSemiBold';
   font-weight: 600;
-  font-size: 1.25em;
   color: #1a2052;
 }
-.section2 .cards h3::first-letter {
+
+.section_services .cards h4::first-letter {
  font-variant: small-caps;
 }
 
-.section2 .cards p {
+.section_services .cards p {
  
-  font-size: 14px;
   line-height: 21px;
   text-align: left;
   color: #212121;
 }
 
-.section2 .cards > img {
+.section_services .cards > img {
 
   background-blend-mode: color-dodge;
 }
 
 
+@media only screen  and (max-width: 1024px) {
+  .section_services .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen  and (max-width: 768px) {
+  .section_services .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 
 
-/* SECTION 3 */
-.section3 {
-  background-image: url('../assets/img/aeroport-paris-cdg-oeuvre-sur-natures-de-miguel-chevalier.png') ;
+/* SECTION EXPERTISE */
+.section_expertise {
+  background: url('../assets/img/aeroport-paris-cdg-oeuvre-sur-natures-de-miguel-chevalier.png') no-repeat;
+  background-size: cover;
   background-blend-mode: soft-light;
+  background-color: #1a2052;
   opacity: 0.85;
   text-align: center;
-  background-color: #1a2052;
-  height: 761px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.section3 > h3{
-  font-family: 'SourceSansPro';
+
+.section_expertise > h3{
   font-weight: normal;
-  margin: 0;
+  margin-top: 20px;
   font-variant: small-caps;
-  font-size: 24px;
   color: #ffffff;
 }
 
-.section3 > p {
+.section_expertise > p {
   color: #fff;
-  width: 590px;
+  max-width: 590px;
+  margin-bottom: 40px;
+  padding: 0 10px;
   font-family: 'SourceSansProLight';
   line-height: 24px;
   align-self: center;
  
 }
-.section3 .cards {
+
+.section_expertise .cards {
   text-align: center;
-  font-family: 'SourceSansPro';
-  margin-top: 51px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1em;
-  padding: 0px 90px;
+  padding: 0px 10%;
 }
-.section3 .cards h3{
-  font-family: 'SourceSansPro';
+
+.section_expertise .cards img {
+  width: 40%;
+}
+
+.section_expertise .cards h3{
   color: rgb(255, 255, 255);
   font-variant: initial;
 }
-.section3 .cards p {
-  font-family: 'SourceSansPro';
-  font-size: 14px;
+
+.section_expertise .cards p {
   line-height: 1.5em;
   text-align: left;
   color: #f5f5f5;
  
 }
 
-/* SECTION 3 */
-.section4 > h3 {
-  font-size: 24px;
+@media only screen  and (max-width: 1024px) {
+
+  .section_expertise .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section_expertise .card_layout {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    grid-template-columns: 1fr 2fr 4fr;
+    grid-column-gap: 1em;
+  }
+
+  .section_expertise .cards img, 
+  .section_expertise .cards h3 {
+    margin: auto;
+    width: 100%;
+  }
+ 
+}
+
+@media only screen  and (max-width: 768px) {
+
+  .section_expertise .card_layout {
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .section_expertise .card_layout p {
+    grid-row: 2;
+    grid-column: 1/3;
+  }
+
+  .section_expertise > p {
+    font-size: 0.8em;
+  }
+ 
+}
+
+
+
+/* SECTION ACTUALITES */
+.section_actualites > h3 {
   font-weight: 600;
   font-variant: small-caps;
   text-align: center;
 }
 
-.section4 .card_rows {
+.section_actualites .card_rows {
   display: flex;
   flex-direction: column;
 }
 
-.section4 .card_row_up {
+.section_actualites .card_row_up {
   display: flex;
   flex-direction: row;
 }
 
-.section4 .card_row_down {
+.section_actualites .card_row_down {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.section4 .card_row_up,
-.section4 .card_row_down {
+.section_actualites .card_row_up,
+.section_actualites .card_row_down {
   justify-content: center;
 }
 
-.section4 .card_layout {
+.section_actualites .card_layout {
   display: flex;
   flex-direction: row;
   margin: 20px;
 }
 
-.section4 .card_row_up .card_layout:nth-child(even) {
+.section_actualites .card_row_up .card_layout:nth-child(even) {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.section4 .card_row_down .card_layout:nth-child(odd) {
+.section_actualites .card_row_down .card_layout:nth-child(odd) {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.section4 .card_text{
+.section_actualites .card_text{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 348px;
+  width: 70%;
   padding: 10px 20px; 
 }
 
-.section4 .card_text h3,
-.section4 .card_text p,
-.section4 .card_text h6 {
+.section_actualites .card_text h3,
+.section_actualites .card_text p,
+.section_actualites .card_text h6 {
   margin: 0; 
   line-height: 1.5em;
 }
 
-.section4 .card_text h3 { 
-  font-size: 24px;
-}
-
-.section4 .card_text p {
+.section_actualites .card_text p {
   font-size: 16px;
 }
 
-.section4 .card_text h6 {
-  font-size: 13px;;
+.section_actualites .card_text h6 {
+  font-size: 13px;
 }
 
-.section4  img{
+.section_actualites  img{
   width: 170px;
 }
 
-/* SECTION 5 */
+@media screen and (max-width: 1024px) {
 
-.section5 {
-  height: 835px;
+  .section_actualites .card_row_up,
+  .section_actualites .card_row_down {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .section_actualites .card_layout {
+    flex-direction: row-reverse;
+  }
+
+}
+
+@media screen and (max-width: 588px) {
+
+  .section_actualites  img{
+  width: 85px;
+}
+
+  .section_actualites .card_text h3 {
+    font-size: 0.8em;
+  }
+  .section_actualites .card_text p {
+    font-size: 0.7em;
+  }
+
+  .section .card_text h6{
+    font-size: 0.5em;
+  }
+
+}
+
+/* SECTION PRODUCTIONS ARTISTIQUES */
+
+.section_prodart {
+  height: 100%;
   background-color: #1a2052;
   text-align: center;
   display: flex;
@@ -345,7 +512,7 @@ header {
   justify-content: space-evenly;
 }
 
-.section5 > h3 {
+.section_prodart > h3 {
   font-size: 24px;
   letter-spacing: 1px;
   font-variant: small-caps;
@@ -355,12 +522,12 @@ header {
   
 }
 
-.section5 .card_img {
+.section_prodart .card_img {
   position: relative;
   z-index: 2;
 }
- 
-.section5 .card_img p::after {
+
+.section_prodart .card_img p::after {
   content: '';
   position: absolute;
   top: 20px;
@@ -370,7 +537,7 @@ header {
   border-color: transparent rgba(26, 32, 82, 0.85) transparent transparent;
 }
 
-.section5 .card_img p {
+.section_prodart .card_img p {
   position: relative;
   height: 20px;
   box-sizing: border-box;
@@ -384,48 +551,56 @@ header {
   opacity: 0.85;
 }
 
-.section5 .cards {
+.section_prodart .cards {
   display: flex;
   justify-content: center;
 }
 
-.section5 .card_layout {
-  width: 550px;
+.section_prodart .card_layout {
+  max-width: 550px;
   margin: 0px 20px;
 }
 
-.section5 .card_layout .card_text {
+.section_prodart .card_layout .card_text {
   text-align: left;
 }
 
-.section5 .card_layout img {
-  width: 550px;
+.section_prodart .card_layout img {
+  width: 100%;
   border: solid 5px #ffffff;
 
 }
 
-.section5 .card_text h3, 
-.section5 .card_text p{
+.section_prodart .card_text h3, 
+.section_prodart .card_text p{
   color: #ffffff;
   line-height: 1.5em;
 }
 
-.section5 .card_text h3 {
+.section_prodart .card_text h3 {
   font-size: 20px;
   text-align: center;
 } 
 
-.section5 .bg {
-  position: relative;
+.section_prodart .bg svg{
+  position: absolute;
   z-index: 1;
-  text-align: right;
-  margin-right: 0;
-  margin-bottom: -180px;
+  text-align: left;
+  margin-top: -270px;
+  margin-left: 150px;
 }
 
-/* SECTION 6*/
+@media only screen and (max-width: 1024px) {
+  .section_prodart .cards{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
 
-.section6 > h3 {
+/* SECTION ARTLAB NUMART*/
+
+.section_numart > h3 {
   font-size: 24px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -438,76 +613,91 @@ header {
 }
 
 
-.section6 .showcase img {
-
+.section_numart .showcase img {
+  position: relative;
+  z-index: 1;
   width: 100%;
 }
 
-.section6 .showcase::before,
-.section6 .showcase::after {
+
+.section_numart .showcase::before,
+.section_numart .showcase::after {
     content: '';
     position: absolute;
+    z-index: 2;
     border-style: solid;
 }
 
-.section6 .showcase::before {
+.section_numart .showcase::before {
   border-width: 0 1300px 50px 0;
   border-color: transparent #f5f5f5 transparent transparent;
 
 }
 
-.section6 .showcase::after {
-
-  margin-top: -55px;
+.section_numart .showcase::after {
+  margin-top: -50px;
   border-width: 50px 0 0 1300px;
   border-color: transparent transparent transparent #f5f5f5;
 }
 
-.section6 .cards {
+.section_numart .cards {
   display: flex;
   justify-content: space-around;
 }
 
-.section6 .card_layout {
-  width: 360px;
+.section_numart .card_layout {
+  max-width: 360px;
 }
 
-.section6 .card_text h3, 
-.section6 .card_text p{
+.section_numart .card_text h3, 
+.section_numart .card_text p{
   line-height: 1.5em;
 }
 
-.section6 .card_text h3 {
+.section_numart .card_text h3 {
   font-size: 20px;
   text-align: center;
   font-weight: 600;
 }
 
-.section6 .bg {
-
+.section_numart .bg {
   text-align: right;
+  position: relative;
+  z-index: 2;
   margin-right: 0;
   margin-top: -450px;
   transform: rotateY(180deg);
   opacity: 0.3;
 }
 
-.section6 .section_footer {
+.section_numart .section_footer {
  margin-top: -130px;
+}
+
+@media only screen and (max-width:768px) {
+  .section_numart .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 10px;
+  }
 }
 
 /* FOOTER */
 
 footer {
-  height: 285px;
   display: flex;
-
+  min-height: 285px;
   background-color: #212121;
-   color: #ffffff;
+  color: #ffffff;
 }
+
 footer .container {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 4fr 4fr 1fr;
+  grid-gap: 16px;
+  margin: 0 20px;
   align-items: center;
   width: 100%;
 }
@@ -522,7 +712,7 @@ footer .reseaux_sociaux {
 }
 
 footer .contact {
-  width: 360px;
+  max-width: 360px;
   height: 150px;
   margin: 0;
   padding: 0;
@@ -534,7 +724,7 @@ footer .contact {
 footer .contact h3 {
   margin: 0;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1.25em;
   font-weight: 300;
   line-height: 1.5em;
 }
@@ -543,7 +733,7 @@ footer .contact > h3 {
    border-bottom: 2px solid #ffffff;
 }
 
-footer .contact h4 {
+footer .contact h5 {
   color: #ffffff;
 }
 
@@ -579,7 +769,59 @@ footer .contact .btn ul {
 }
 
 footer .btn ul li:last-child {
-  width: 75px;
+  max-width: 75px;
   background: #ffffff;
   color: #000000;
+}
+
+@media only screen and (max-width: 1024px) {
+  footer .contact h3 {
+    font-size: 0.8em
+  }
+  footer .contact ul li {
+    font-size: 0.7em;
+  }
+
+} 
+
+@media only screen and (max-width: 768px) {
+
+  footer .container {
+   grid-template-columns: 4fr 4fr;
+  }
+
+  footer .reseaux_sociaux {
+    flex-direction: row;
+    border-right: none;
+    grid-column: 1/3;
+    margin: auto;
+    padding-right: 0;
+  }
+
+  
+  [alt="footer_logo"] {
+    width: 25%;
+    margin-left: auto;
+  }
+   
+  /* footer .reseaux_sociaux img {
+    width: 30px;
+  } */
+
+}
+
+@media only screen and (max-width: 528px) {
+
+  footer .contact {
+    grid-column: 1/3;
+    margin: auto;
+    margin-top: 40px;
+    width: 250px;
+    
+  }
+
+  footer .contact ul li {
+    
+  }
+    
 }
