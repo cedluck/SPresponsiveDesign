@@ -117,17 +117,12 @@ header {
   .nav ul li {
     font-size: 1em;
   }
-}
 
-
-@media only screen  and (max-width: 588px) {
   .nav ul {
-    grid-column-gap: 1em;
-  }
-  .nav ul li {
-    font-size: 0.8em;
+    display: none;
   }
 }
+
 
 /* RESEAUX SOCIAUX */
 .rs ul{
@@ -272,7 +267,7 @@ header {
 
 @media only screen and (max-width:400px) {
   .intersection p {
-    font-size: 0.5em;
+    font-size: 0.45em;
   }
 }
 
@@ -299,7 +294,9 @@ header {
   grid-column-gap: 20px;
   padding: 0px 10%;
 }
-
+.section_services img {
+  max-width: 60%;
+}
 .section_services .cards h4 {
   margin-top: 35px;
   font-weight: 600;
